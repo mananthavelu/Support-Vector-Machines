@@ -4,7 +4,7 @@ Y1=ones(50,1);
 Y2=-ones(51,1);
 X=[X1;X2];
 Y=[Y1;Y2];
-SVMModel = fitcsvm(X,Y,'KernelFunction','rbf')
+SVMModel = fitcsvm(X,Y,'KernelFunction','rbf','Boxconstraint',500)
 figure;
 hold on;
 plot(X1(:,1),X1(:,2),'ro');
