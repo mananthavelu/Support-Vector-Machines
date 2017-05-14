@@ -66,7 +66,7 @@ hold off;
 
 %1.3
 %1.3.1
-democlass
+%democlass
 load iris
 [alpha,b] = trainlssvm({X,Y,'c',gam,[],'lin_kernel'});
 figure;
