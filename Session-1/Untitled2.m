@@ -1,6 +1,5 @@
 load iris
 
-
 %
 % train LS-SVM classifier with linear kernel 
 %
@@ -10,7 +9,7 @@ disp('Linear kernel'),
 
 [alpha,b] = trainlssvm({X,Y,type,gam,[],'lin_kernel'});
 
-figure; plotlssvm({X,Y,type,gam,[],'lin_kernel','preprocess'},{alpha,b});
+figure; plotlssvm({X,Y,type,gam,[],'lin_kernel'},{alpha,b});
 
 [Yht, Zt] = simlssvm({X,Y,type,gam,[],'lin_kernel'}, {alpha,b}, Xt);
 

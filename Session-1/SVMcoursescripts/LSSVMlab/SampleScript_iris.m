@@ -74,6 +74,3 @@ end
 figure;
 plot(log(sig2list), errlist, '*-'), 
 xlabel('log(sig2)'), ylabel('number of misclass'),
-
-
-
