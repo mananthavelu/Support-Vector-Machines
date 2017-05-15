@@ -62,5 +62,18 @@ colorbar,
 %1.3.1.2
 sig2=10;
 gam=10;
-performance = crossvalidate({X,Y,'c',gam,sig2,'RBF_kernel'}, ...
+performance_cv = crossvalidate({X,Y,'c',gam,sig2,'RBF_kernel'}, ...
 10,'misclass');
+
+performance_so = leaveoneout({X,Y,'c',gam,sig2,'RBF_kernel'}, ...
+'misclass');
+
+disp(performance_cv)
+disp(performance_so)
+
+
+%model = {X,Y,'c',[],[],'RBF_kernel','csa'};
+%[gam_1,sig2_1,cost_1] = tunelssvm(model,'simplex', 'crossvalidatelssvm',{10,'misclass'});
+
+model = {X,Y,'c',[],[],'RBF_kernel','ds'};
+[gam_2,sig2_2,cost_2] = tunelssvm(model,'simplex', 'crossvalidatelssvm',{10,'misclass'});
