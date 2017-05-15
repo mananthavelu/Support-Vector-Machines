@@ -4,7 +4,7 @@
 % tune the sig2 while fix gam
 %
 disp('RBF kernel')
-gamlist = [1,5,10,25,50,100,1000]; sig2=0.1;
+gamlist = [0.05,0.1,1,10,50,100,500]; sig2=0.1;
 errlist=[];
 
 for gamma=gamlist
