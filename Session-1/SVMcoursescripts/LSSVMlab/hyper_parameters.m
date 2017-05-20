@@ -97,3 +97,7 @@ legend('gam', 'sig2');
 'RBF_kernel'},{alpha,b},Xval);
 [tpr,fpr,thresholds]=roc(Ysim,Yval);
 
+%Homework Problems
+
+% The Ripley data-set
+
